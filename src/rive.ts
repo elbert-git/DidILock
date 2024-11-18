@@ -2,14 +2,20 @@ import * as rive from "@rive-app/canvas";
 
 let lockBool: rive.StateMachineInput | undefined = undefined
 
-export function InitiailiseRive(canvas: HTMLCanvasElement) {
+export function InitiailiseRive(canvas: HTMLCanvasElement, parent: HTMLElement) {
 
     const canvasSize = 250
 
     // create on resize
     function onResize() {
-        canvas.height = canvasSize
-        canvas.width = canvasSize
+        // const parentWidth = parent.clientWidth
+        // const parentHeight = parent.clientHeight
+        // const sizeMultiplier = 3
+        // const size = (parent.clientHeight * sizeMultiplier) / 2
+        const size = 700 / 2
+        // set canvas size
+        canvas.height = size
+        canvas.width = size
         r.resizeDrawingSurfaceToCanvas();
     }
 

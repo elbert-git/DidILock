@@ -2,4 +2,7 @@ import './style.css'
 import { InitiailiseRive, SetRiveLock } from './rive'
 
 // init rive
-InitiailiseRive(document.getElementById("canvas") as HTMLCanvasElement)
+InitiailiseRive(
+    document.getElementById("canvas") as HTMLCanvasElement,
+    document.querySelector(".canvasWrapper") as HTMLElement
+)
