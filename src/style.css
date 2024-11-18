@@ -1,0 +1,81 @@
+/* import font */
+@import url("https://fonts.googleapis.com/css2?family=Lilita+One&family=Notable&display=swap");
+
+/* defaults */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: 0;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  /* max-height: 100%; */
+  /* overflow: hidden; */
+  background-color: beige;
+}
+
+html {
+  display: flex;
+  justify-content: center;
+}
+
+body {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* .lilita { */
+* {
+  font-family: "Lilita One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* styling the header */
+header {
+  padding-top: 2rem;
+}
+
+header p,
+h1 {
+  text-align: center;
+  width: 100%;
+}
+
+.line1 {
+  font-size: 1.7em;
+  position: relative;
+  top: 0.9rem;
+}
+.line2 {
+  font-size: 5em;
+}
+.line3 {
+  letter-spacing: 2px;
+  position: relative;
+  top: -0.5rem;
+  font-size: 1.2rem;
+}
+
+/* styling the canvas */
+.canvasWrapper {
+  flex-grow: 1;
+  width: 100%;
+  background-color: rgb(162, 162, 255);
+}
+
+canvas {
+  height: 100% !important;
+  transform: scale(0.5);
+}
+
+/* styling the bottom */
+.bottom {
+  height: 5rem;
+}
