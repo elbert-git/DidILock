@@ -1,1 +1,2 @@
->>> need to center and fix lock framing
+>>> fix little border padding in ellipse svg??? 
+>>> fix centering of lock

@@ -4,15 +4,13 @@ let lockBool: rive.StateMachineInput | undefined = undefined
 
 export function InitiailiseRive(canvas: HTMLCanvasElement, parent: HTMLElement) {
 
-    const canvasSize = 250
-
     // create on resize
     function onResize() {
         // const parentWidth = parent.clientWidth
         // const parentHeight = parent.clientHeight
         // const sizeMultiplier = 3
         // const size = (parent.clientHeight * sizeMultiplier) / 2
-        const size = 700 / 2
+        const size = 450 / 2
         // set canvas size
         canvas.height = size
         canvas.width = size
@@ -38,6 +36,8 @@ export function InitiailiseRive(canvas: HTMLCanvasElement, parent: HTMLElement) 
         },
     });
 
+    onResize()
+
     // listen to futuer rive events
     window.addEventListener("resize", () => {
         onResize()
@@ -47,3 +47,5 @@ export function InitiailiseRive(canvas: HTMLCanvasElement, parent: HTMLElement) 
 export function SetRiveLock(b: boolean) {
     lockBool!.value = b
 }
+
+

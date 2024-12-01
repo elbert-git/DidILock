@@ -6,17 +6,18 @@
   padding: 0;
   margin: 0;
   box-sizing: 0;
+  /* outline: 1px solid red; */
 }
 
 html,
 body {
   height: 100%;
-  width: 100%;
+  width: 100vw;
   max-height: 100%;
   max-width: 100%;
   /* max-height: 100%; */
   overflow: hidden;
-  background-color: beige;
+  background-color: rgb(255, 85, 85);
 }
 
 html {
@@ -41,7 +42,8 @@ body {
 
 /* styling the header */
 header {
-  padding-top: 2rem;
+  padding-top: 1rem;
+  /* background-color: rgba(255, 0, 0, 0.355); */
 }
 
 header p,
@@ -70,16 +72,18 @@ h1 {
   flex-grow: 1;
   width: 100%;
   max-width: 100vw;
-  background-color: rgb(162, 162, 255);
+  /* background-color: rgb(162, 162, 255); */
   /* display: flex;
   align-items: center;
   justify-content: center; */
   position: relative;
+  left: 18px;
+  top: 15px;
   overflow: visible;
 }
 
 canvas {
-  outline: 1px red solid;
+  /* outline: 1px red solid; */
   /* transform: scale(0.5); */
   position: absolute;
   top: 50%;
@@ -89,5 +93,25 @@ canvas {
 
 /* styling the bottom */
 .bottom {
-  height: 5rem;
+  /* background-color: rgba(0, 128, 0, 0.524); */
+  height: 12rem;
+  position: relative;
+}
+#answer {
+  position: relative;
+  font-size: 8rem;
+  z-index: 5;
+}
+#durationLabel {
+  position: relative;
+  text-align: center;
+  z-index: 5;
+}
+
+.ellipse {
+  z-index: 1;
+  position: absolute;
+  top: calc(50% + 2.5rem);
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
