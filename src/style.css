@@ -20,6 +20,10 @@ body {
   background-color: rgb(255, 85, 85);
 }
 
+body {
+  transition: 0.1s;
+}
+
 html {
   display: flex;
   justify-content: center;
