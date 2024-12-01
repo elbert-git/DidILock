@@ -17,10 +17,7 @@ const constants = {
 let locked = false;
 
 // init rive first
-InitiailiseRive(
-  document.getElementById("canvas") as HTMLCanvasElement,
-  document.querySelector(".canvasWrapper") as HTMLElement
-);
+InitiailiseRive(document.getElementById("canvas") as HTMLCanvasElement);
 
 // main functions
 let userData: UserData | null = null;
@@ -39,12 +36,21 @@ function onInitialLoad() {
     userData = loadData();
   }
 
-  // check if elapsed time has caused the chain to lock
-  const duration = Date.now() - userData!.lastLocked;
-  if (duration > constants.durationToUnlock) {
+  // if is unlocked previously leave it unlocked
+  if (userData!.locked === false) {
     setLockFalse();
-  } else {
-    setLockTrue();
+  }
+  // if is locked previously
+  else {
+    // if longer than threshold, make unlock
+    const duration = Date.now() - userData!.lastLocked;
+    if (duration > constants.durationToUnlock) {
+      setLockFalse();
+    }
+    // if locked within threshold leave locked
+    else {
+      setLockTrue();
+    }
   }
 }
 function setLockTrue() {

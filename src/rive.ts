@@ -3,10 +3,7 @@ import onInitialLoad from "./main";
 
 let lockBool: rive.StateMachineInput | undefined = undefined;
 
-export function InitiailiseRive(
-  canvas: HTMLCanvasElement,
-  parent: HTMLElement
-) {
+export function InitiailiseRive(canvas: HTMLCanvasElement) {
   // create on resize
   function onResize() {
     // const parentWidth = parent.clientWidth
