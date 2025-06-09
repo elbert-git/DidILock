@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Toggle Button</title>
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .container {
+        text-align: center;
+      }
+      button {
+        font-size: 1.2rem;
+        padding: 10px 20px;
+      }
+      .value {
+        margin-top: 20px;
+        font-size: 1.2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <button id="toggleBtn">Button</button>
+      <div class="value" id="valueDisplay">value: false</div>
+    </div>
+
+    <script>
+      const valueDisplay = document.getElementById("valueDisplay");
+      const toggleBtn = document.getElementById("toggleBtn");
+      let value = false;
+
+      toggleBtn.addEventListener("click", () => {
+        value = !value;
+        valueDisplay.textContent = `value: ${value}`;
+      });
+    </script>
+  </body>
+</html>
